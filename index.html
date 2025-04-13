@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CineTalkies</title>
+  <title>🎬 CineTalkies</title>
+  <link rel="icon" type="image/png" href="https://img.icons8.com/ios-filled/50/ffffff/clapperboard.png"/>
+
   <style>
     body {
       margin: 0;
@@ -15,7 +17,6 @@
       position: relative;
     }
 
-    /* Dark overlay */
     body::before {
       content: "";
       position: absolute;
@@ -48,12 +49,21 @@
     }
 
     .header {
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       font-size: 36px;
       font-weight: bold;
       color: #ff4444;
       margin-top: 20px;
       text-shadow: 2px 2px 10px #000;
+      gap: 10px;
+    }
+
+    .header svg {
+      width: 36px;
+      height: 36px;
+      fill: #ff4444;
     }
 
     .theater {
@@ -95,13 +105,13 @@
       box-shadow: 0 0 30px #333;
     }
 
-    .screen video {
+    .screen iframe {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      border: 0;
     }
 
     h3 {
@@ -120,19 +130,21 @@
     <a href="https://forms.gle/49pGwSupHxUsHwhB6" target="_blank">Contact</a>
   </nav>
 
-  <div class="header">Western Style Shot Film by Kaneendran</div>
+  <div class="header">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M4 4h2l2 4h-2zm4 0h2l2 4h-2zm4 0h2l2 4h-2zM3 7h18v13a1 1 0 01-1 1H4a1 1 0 01-1-1z" />
+    </svg>
+    Western Style Shot Film by Kaneendran
+  </div>
 
   <div class="theater">
     <div class="curtains"></div>
     <div class="screen">
-        <iframe 
-          src="https://drive.google.com/file/d/1WwsQaeSLSa_S5Duc2uIbaiLfssLzI_4j/preview" 
-          width="100%" 
-          height="100%" 
-          allow="autoplay" 
-          style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;">
-        </iframe>
-      </div>
+      <iframe 
+        src="https://drive.google.com/file/d/1WwsQaeSLSa_S5Duc2uIbaiLfssLzI_4j/preview" 
+        allow="autoplay">
+      </iframe>
+    </div>
   </div>
 
   <h3>Thanks for Watching my Experimental Film 🎬<br>Got Queries or Reviews? Hit the Contact button above!</h3>
